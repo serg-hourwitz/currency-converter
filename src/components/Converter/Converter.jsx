@@ -1,31 +1,44 @@
+import Select from "./Select/Select";
+import classes from "./Converter.module.css";
+import { useState } from 'react';
+
 
 const Converter = () => {
-    return (
+
+  const [firstValue, setFirstValueFunc] = useState("");
+  const [secondValue, setSecondValueFunc] = useState("");
+
+  function onFirstInputChange(event) {
+    setFirstValueFunc(event.target.value);
+  }
+  function onSecondInputChange(event) {
+    setSecondValueFunc(event.target.value);
+  }
+  return (
+    <div className={classes.Converter}>
+      <Select />
       <div>
-        <div>
-          <select size="1">
-            <option>UAH</option>
-            <option>USD</option>
-            <option>EURO</option>
-            <option>GBP</option>
-          </select>
-          <input type="number" required />
-        </div>
-        <div>
-          <input type="submit" value="convert" />
-          <input type="reset" value="reset" />
-        </div>
-        <div>
-          <select size="1">
-            <option>UAH</option>
-            <option>USD</option>
-            <option>EURO</option>
-            <option>GBP</option>
-          </select>
-          <input type="number" required />
-        </div>
+        <input
+          type="number"
+          required
+          value={firstValue}
+          onChange={(event) => onFirstInputChange(event)}
+        />
       </div>
-    );
+      <div>
+        <input className={classes.reset} type="reset" value="reset" />
+      </div>
+      <Select />
+      <div>
+        <input
+          type="number"
+          required
+          value={secondValue}
+          onChange={(event) => onSecondInputChange(event)}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default Converter;

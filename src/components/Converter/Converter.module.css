@@ -1,0 +1,21 @@
+.Converter {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 90px;
+}
+
+input {
+    width: 80px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-weight: bold;
+    border: 2px solid grey;
+}
+
+.reset {
+    width: 120px;
+    color: white;
+    background-color: #085693;
+    border: 2px solid #d8c83b;
+    text-transform: uppercase;
+}
