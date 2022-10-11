@@ -5,3 +5,7 @@ select {
     border-radius: 5px;
     border: 2px solid #d88100;
 }
+
+select:focus {
+    outline: none;
+}
