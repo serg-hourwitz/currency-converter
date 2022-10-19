@@ -26,7 +26,15 @@ const Converter = () => {
         />
       </div>
       <div>
-        <input className={classes.reset} type="reset" value="reset" />
+        <input
+          className={classes.reset}
+          type="reset"
+          value="reset"
+          onClick={() => {
+            setFirstValueFunc("")
+            setSecondValueFunc("")
+          }}
+        />
       </div>
       <Select />
       <div>

@@ -6,7 +6,7 @@ const Select = () => {
         <select size="1">
           <option>UAH</option>
           <option>USD</option>
-          <option>EURO</option>
+          <option>EUR</option>
           <option>GBP</option>
         </select>
       </div>
